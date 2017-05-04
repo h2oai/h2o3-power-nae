@@ -1,4 +1,4 @@
-FROM ppc64le:ubuntu:16.04
+FROM ppc64le/ubuntu:16.04
 MAINTAINER H2o.ai <ops@h2o.ai>
 
 ENV DEBIAN_FRONTEND noninteractive
