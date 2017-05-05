@@ -11,8 +11,8 @@ ADD scripts/sssh /opt/sssh
 
 # Install H2o
 RUN \
-  wget http://h2o-release.s3.amazonaws.com/h2o/latest_stable -O latest && \
-  wget --no-check-certificate -i latest -O /opt/h2o.zip && \
+  wget -quiet http://h2o-release.s3.amazonaws.com/h2o/latest_stable -O latest && \
+  wget -quiet --no-check-certificate -i latest -O /opt/h2o.zip && \
   unzip -d /opt /opt/h2o.zip && \
   rm /opt/h2o.zip && \
   cd /opt && \
