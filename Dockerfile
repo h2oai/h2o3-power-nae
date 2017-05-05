@@ -15,3 +15,6 @@ RUN \
   cd `find . -name 'h2o.jar' | sed 's/.\///;s/\/h2o.jar//g'` && \ 
   cp h2o.jar /opt
 
+ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
+RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
+
