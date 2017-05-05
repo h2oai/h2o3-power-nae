@@ -7,6 +7,7 @@ ADD scripts/start-h2o3.sh /opt/start-h2o3.sh
 ADD scripts/start-cluster.sh /opt/start-cluster.sh
 ADD scripts/sssh /opt/sssh
 ADD url.txt /etc/NAE/url.txt
+ADD screenshot.png /etc/NAE/screenshot.png
 
 # Install H2o
 RUN \
