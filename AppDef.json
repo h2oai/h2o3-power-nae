@@ -1,7 +1,7 @@
 {
-    "name": "Ubuntu Linux for POWER8", 
-    "description": "Ubuntu Linux ephemeral environment on POWER8 system with NVIDIA CUDA toolkit.", 
-    "author": "Nimbix, Inc.", 
+    "name": "H2o3 for POWER8", 
+    "description": "H2o3 on POWER8 system with NVIDIA CUDA toolkit.", 
+    "author": "H2o.ai", 
     "licensed": true, 
     "classifications": [
         "Software Development",
