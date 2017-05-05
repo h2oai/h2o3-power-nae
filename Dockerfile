@@ -42,7 +42,7 @@ ADD scripts/start-h2o3.sh /opt/start-h2o3.sh
 # Set executable on scripts
 RUN \
   chown -R nimbix:nimbix /opt && \
-  chmod +x /opt/start-h2o3.sh && \
+  chmod +x /opt/start-h2o3.sh
 
 ADD NAE/screenshot.png /etc/NAE/screenshot.png
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
