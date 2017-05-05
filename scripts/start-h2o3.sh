@@ -2,9 +2,14 @@
 
 # If you want S3 support create a core-site.xml file and place it in $HOME/.ec2/
 
-echo "http://%PUBLICADDR%:54321/" > /etc/NAE/url.txt
-
 set -e
+
+# Change Nginx Redirect
+sudo sed -e 's/8888/54321/' -i /etc/nginx/sites-enabled/default
+sudo sed -e 's/8888/54321/' -i /etc/nginx/sites-enabled/notebook-site
+
+# Start Notebook
+/usr/local/bin/nimbix_notebook
 
 d=`dirname $0`
 

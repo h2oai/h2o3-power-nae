@@ -40,6 +40,13 @@
             "description": "Run the H2o Server",
             "parameters": {} 
         },
+        "Jupyter": {
+            "path": "/usr/local/bin/nimbix_notebook",
+            "interactive": true,
+            "name": "Jupyter Notebook",
+            "description": "Launch Jupyter Notebook, Connection address and credentials will appear in your web browser once available.",
+            "parameters": {}
+        },
         "launch": {
             "path": "/sbin/init", 
             "interactive": true, 
