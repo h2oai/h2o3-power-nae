@@ -16,7 +16,43 @@ RUN \
   cd `find . -name 'h2o.jar' | sed 's/.\///;s/\/h2o.jar//g'` && \ 
   cp h2o.jar /opt
 
+# Install R Dependancies
+RUN \  
+  apt-get install -y \
+    apt-utils \
+    software-properties-common \
+    python-software-properties
+
+RUN \
+  echo "deb http://cran.rstudio.com/bin/linux/ubuntu trusty/" | sudo tee -a /etc/apt/sources.list && \
+  gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 && \
+  gpg -a --export E084DAB9 | apt-key add -&& \
+  apt-get update -y && \
+  apt-get install -y \
+    r-base \
+    r-base-dev
+
+# Install Python Dependancies
+RUN \
+  /usr/bin/pip3 install --upgrade pip && \
+  apt-get install -y \
+    python3-pandas \
+    python3-numpy \
+    python3-matplotlib \
+    python3-sklearn && \
+  cd /opt && \
+  /usr/bin/pip3 install `find . -name "*.whl"` && \
+  apt-get clean && \
+  rm -rf /var/cache/apt/*
+
+# Add start script
 ADD scripts/start-h2o3.sh /opt/start-h2o3.sh
+
+# Set executable on scripts
+RUN \
+  chown -R nimbix:nimbix /opt && \
+  chmod +x /opt/start-h2o3.sh && \
 
 ADD NAE/screenshot.png /etc/NAE/screenshot.png
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
+ADD NAE/README.md /etc/NAE/README.md

@@ -7,6 +7,7 @@ set -e
 # Change Nginx Redirect
 sudo sed -e 's/8888/54321/' -i /etc/nginx/sites-enabled/default
 sudo sed -e 's/8888/54321/' -i /etc/nginx/sites-enabled/notebook-site
+sudo /usr/sbin/nginx
 
 # Use 90% of RAM for H2O.
 memTotalKb=`cat /proc/meminfo | grep MemTotal | sed 's/MemTotal:[ \t]*//' | sed 's/ kB//'`
@@ -29,7 +30,4 @@ then
   hdfs_version=""
 fi
 
-java -Xmx${xmxMb}m -jar /opt/h2o.jar -name H2ODemo -flatfile /opt/flatfile.txt -port 54321 ${hdfs_config_option} ${hdfs_config_value} ${hdfs_option} ${hdfs_option_value} ${hdfs_version} &
-
-# Start Notebook
-/usr/local/bin/nimbix_notebook
+java -Xmx${xmxMb}m -jar /opt/h2o.jar -name H2ODemo -flatfile /opt/flatfile.txt -port 54321 ${hdfs_config_option} ${hdfs_config_value} ${hdfs_option} ${hdfs_option_value} ${hdfs_version}
