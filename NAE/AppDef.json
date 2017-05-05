@@ -18,10 +18,10 @@
         "OBJECT"
     ], 
     "commands": {
-        "run": {
+        "Batch": {
             "path": "/usr/bin/env", 
             "interactive": false, 
-            "name": "Run", 
+            "name": "Batch", 
             "description": "Run a command in the environment and exit.", 
             "parameters": {
                 "command": {
@@ -37,7 +37,7 @@
             "path": "/opt/start-h2o3.sh",
             "interactive": true,
             "name": "H2o-3 Cluster",
-            "description": "Run the H2o Server",
+            "description": "Run the H2o-3 Server",
             "parameters": {} 
         },
         "Jupyter": {
