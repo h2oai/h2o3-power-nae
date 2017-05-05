@@ -10,7 +10,7 @@
     "machines": [
         "np8*"
     ],
-    "scale_max": 1,
+    "scale_max": 16,
     "vault-types": [
         "FILE", 
         "BLOCK", 
@@ -32,7 +32,14 @@
                     "required": true
                 }
             }
-        }, 
+        },
+	"server": {
+            "path": "/opt/start-h2o3.sh",
+            "interactive": true,
+            "name": "H2o-3 Cluster",
+            "description": "Run the H2o Server",
+            "parameters": {} 
+        },
         "launch": {
             "path": "/sbin/init", 
             "interactive": true, 
