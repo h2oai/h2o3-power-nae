@@ -50,7 +50,7 @@
         "launch": {
             "path": "/sbin/init", 
             "interactive": true, 
-            "name": "Launch", 
+            "name": "SSH", 
             "description": "Launch and ephemeral environment and connect via SSH.", 
             "parameters": {}
         }
