@@ -2,6 +2,8 @@
 
 # If you want S3 support create a core-site.xml file and place it in $HOME/.ec2/
 
+echo "http://%PUBLICADDR%:54321/" > /etc/NAE/url.txt
+
 set -e
 
 d=`dirname $0`
