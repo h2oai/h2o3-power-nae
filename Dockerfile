@@ -16,14 +16,7 @@ RUN \
   cd `find . -name 'h2o.jar' | sed 's/.\///;s/\/h2o.jar//g'` && \ 
   cp h2o.jar /opt
 
-# Install Python Dependancies
-RUN \
-  /usr/bin/pip3 install --upgrade pip && \
-  cd /opt && \
-  /usr/bin/pip3 install `find . -name "*.whl"`
-
 ADD scripts/start-h2o3.sh /opt/start-h2o3.sh
 
 ADD NAE/screenshot.png /etc/NAE/screenshot.png
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
-RUN wget --post-file=/etc/NAE/AppDef.json --no-verbose https://api.jarvice.com/jarvice/validate -O -
