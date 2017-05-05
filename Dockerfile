@@ -46,4 +46,3 @@ RUN \
 
 ADD NAE/screenshot.png /etc/NAE/screenshot.png
 ADD NAE/AppDef.json /etc/NAE/AppDef.json
-ADD NAE/README.md /etc/NAE/README.md
