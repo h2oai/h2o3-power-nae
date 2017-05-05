@@ -23,15 +23,6 @@ RUN \
     software-properties-common \
     python-software-properties
 
-RUN \
-  echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list && \
-  gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9 && \
-  gpg -a --export E084DAB9 | apt-key add -&& \
-  apt-get update -y && \
-  apt-get install -y \
-    r-base \
-    r-base-dev
-
 # Install Python Dependancies
 RUN \
   /usr/bin/pip3 install --upgrade pip && \
