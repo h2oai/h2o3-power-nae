@@ -33,7 +33,7 @@
                 }
             }
         },
-	"server": {
+	"H2o3": {
             "path": "/opt/start-h2o3.sh",
             "interactive": true,
             "name": "H2o-3 Cluster",
@@ -47,7 +47,7 @@
             "description": "Launch Jupyter Notebook, Connection address and credentials will appear in your web browser once available.",
             "parameters": {}
         },
-        "launch": {
+        "SSH": {
             "path": "/sbin/init", 
             "interactive": true, 
             "name": "SSH", 
