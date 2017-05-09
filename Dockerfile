@@ -38,6 +38,7 @@ RUN \
 
 # Add start script
 ADD scripts/start-h2o3.sh /opt/start-h2o3.sh
+ADD scripts/start-notebook.sh /opt/start-notebook.sh
 
 # Set executable on scripts
 RUN \

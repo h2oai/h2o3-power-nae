@@ -7,6 +7,8 @@ set -e
 # Change Nginx Redirect
 sudo sed -e 's/8888/54321/' -i /etc/nginx/sites-enabled/default
 sudo sed -e 's/8888/54321/' -i /etc/nginx/sites-enabled/notebook-site
+
+sudo service ssh restart
 sudo /usr/sbin/nginx
 
 # Use 90% of RAM for H2O.

@@ -8,11 +8,9 @@
         "Software Testing"
     ], 
     "machines": [
-        "np8gk*",
-        "np8g*",
         "np8*"
     ],
-    "scale_max": 16,
+    "scale_max": 1,
     "vault-types": [
         "FILE", 
         "BLOCK", 
@@ -43,7 +41,7 @@
             "parameters": {} 
         },
         "Jupyter": {
-            "path": "/usr/local/bin/nimbix_notebook",
+            "path": "/opt/start-notebook.sh",
             "interactive": true,
             "name": "Jupyter Notebook",
             "description": "Launch Jupyter Notebook, Connection address and credentials will appear in your web browser once available.",
