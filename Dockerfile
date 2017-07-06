@@ -17,6 +17,7 @@ RUN \
 
 # Install R Dependancies
 RUN \  
+  apt-get update && \
   apt-get install -y \
     apt-utils \
     software-properties-common \
