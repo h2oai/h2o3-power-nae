@@ -8,8 +8,7 @@ RUN \
 
 # Install H2o
 RUN \
-  wget --quiet http://h2o-release.s3.amazonaws.com/h2o/latest_stable -O latest && \
-  wget --quiet --no-check-certificate -i latest -O /opt/h2o.zip && \
+  wget --no-check-certificate http://h2o-release.s3.amazonaws.com/h2o/rel-vajda/3/h2o-3.10.5.3.zip -O /opt/h2o-latest.zip && \
   unzip -d /opt /opt/h2o.zip && \
   rm /opt/h2o.zip && \
   cd /opt && \
