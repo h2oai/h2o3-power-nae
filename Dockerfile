@@ -8,9 +8,9 @@ RUN \
 
 # Install H2o
 RUN \
-  wget --no-check-certificate http://h2o-release.s3.amazonaws.com/h2o/rel-vajda/3/h2o-3.10.5.3.zip -O /opt/h2o-latest.zip && \
-  unzip -d /opt /opt/h2o.zip && \
-  rm /opt/h2o.zip && \
+  wget --quiet --no-check-certificate http://h2o-release.s3.amazonaws.com/h2o/rel-vajda/3/h2o-3.10.5.3.zip -O /opt/h2o-latest.zip && \
+  unzip -d /opt /opt/h2o-latest.zip && \
+  rm /opt/h2o-latest.zip && \
   cd /opt && \
   cd `find . -name 'h2o.jar' | sed 's/.\///;s/\/h2o.jar//g'` && \ 
   cp h2o.jar /opt
